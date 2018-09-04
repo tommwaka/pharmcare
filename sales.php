@@ -112,14 +112,9 @@ $finalcode='RS-'.createRandomPassword();
 	<div class="span2">
           <div class="well sidebar-nav">
               <ul class="nav nav-list">
-              <li><a href="sales.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li> 
-			<li class="active"><a href="sales.php?id=cash"><i class="icon-shopping-cart icon-2x"></i> Sales</a>  </li>             
-			<li><a href="products.php"><i class="icon-list-alt icon-2x"></i> Products</a>                                     </li>
-			<li><a href="customer.php"><i class="icon-group icon-2x"></i> Customers</a>                                    </li>
-			<li><a href="supplier.php"><i class="icon-group icon-2x"></i> Suppliers</a>                                    </li>
-			<li><a href="salesreport.php?d1=0&d2=0"><i class="icon-bar-chart icon-2x"></i> Sales Report</a>                </li>
-			<br><br><br><br><br><br>
-			<li>
+              <li><a href="cash_sales.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li> 
+			  <li class="active"><a href="sales.php?id=cash&invoice=<?php echo $finalcode ?>"><i class="icon-shopping-cart icon-2x"></i> Sales</a>  </li>             
+			
 			 <div class="hero-unit-clock">
 		
 			<form name="clock">
@@ -137,11 +132,11 @@ $finalcode='RS-'.createRandomPassword();
 			<i class="icon-money"></i> Sales
 			</div>
 			<ul class="breadcrumb">
-			<a href="sales.php"><li>Dashboard</li></a> /
+			<a href="cash_sales.php"><li>Dashboard</li></a> /
 			<li class="active">Sales</li>
 			</ul>
 <div style="margin-top: -19px; margin-bottom: 21px;">
-<a  href="sales.php"><button class="btn btn-default btn-large" style="float: none;"><i class="icon icon-circle-arrow-left icon-large"></i> Back</button></a>
+<a  href="cash_sales.php"><button class="btn btn-default btn-large" style="float: none;"><i class="icon icon-circle-arrow-left icon-large"></i> Back</button></a>
 </div>
 													
 <form action="incoming.php" method="post" >
@@ -171,7 +166,7 @@ $finalcode='RS-'.createRandomPassword();
 	<thead>
 		<tr>
 			<th> Product Name </th>
-			<th> Generic Name </th>
+			<th> Chemical Name </th>
 			<th> Category / Description </th>
 			<th> Price </th>
 			<th> Qty </th>
@@ -193,7 +188,7 @@ $finalcode='RS-'.createRandomPassword();
 			<tr class="record">
 			<td hidden><?php echo $row['product']; ?></td>
 			<td><?php echo $row['product_code']; ?></td>
-			<td><?php echo $row['gen_name']; ?></td>
+			<td><?php echo $row['chem_name']; ?></td>
 			<td><?php echo $row['name']; ?></td>
 			<td>
 			<?php

@@ -113,7 +113,7 @@ $finalcode='RS-'.createRandomPassword();
           <div class="well sidebar-nav">
               <ul class="nav nav-list">
               <li><a href="admin.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li> 
-			  <li><a href="staff.php"><i class="icon-group icon-2x"></i> Users</a> 
+			  <li><a href="staff.php"><i class="icon-group icon-2x"></i> Users</a> </li>
 			<li class="active"><a href="sales.php?id=cash&invoice=<?php echo $finalcode ?>"><i class="icon-shopping-cart icon-2x"></i> Sales</a>  </li>             
 			<li><a href="products.php"><i class="icon-list-alt icon-2x"></i> Products</a>                                     </li>
 			<li><a href="customer.php"><i class="icon-group icon-2x"></i> Customers</a>                                    </li>
@@ -138,7 +138,7 @@ $finalcode='RS-'.createRandomPassword();
 			<i class="icon-money"></i> Sales
 			</div>
 			<ul class="breadcrumb">
-			<a href="cashier.php"><li>Dashboard</li></a> /
+			<a href="admin.php"><li>Dashboard</li></a> /
 			<li class="active">Sales</li>
 			</ul>
 <div style="margin-top: -19px; margin-bottom: 21px;">

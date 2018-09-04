@@ -21,7 +21,7 @@ Pharmcare
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
-<link href="../style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 <!--sa poip up-->
 <script src="jeffartagame.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/application.js" type="text/javascript" charset="utf-8"></script>
@@ -35,12 +35,12 @@ Pharmcare
 function Clickheretoprint()
 { 
   var disp_setting="toolbar=yes,location=no,directories=yes,menubar=yes,"; 
-      disp_setting+="scrollbars=yes,width=700, height=400, left=100, top=25"; 
+      disp_setting+="scrollbars=yes,width=800, height=400, left=100, top=25"; 
   var content_vlue = document.getElementById("content").innerHTML; 
   
   var docprint=window.open("","",disp_setting); 
    docprint.document.open(); 
-   docprint.document.write('</head><body onLoad="self.print()" style="width: 700px; font-size:11px; font-family:arial; font-weight:normal;">');          
+   docprint.document.write('</head><body onLoad="self.print()" style="width: 800px; font-size: 13px; font-family: arial;">');          
    docprint.document.write(content_vlue); 
    docprint.document.close(); 
    docprint.focus(); 
@@ -120,12 +120,11 @@ window.onload=startclock;
 	<div class="span2">
           <div class="well sidebar-nav">
               <ul class="nav nav-list">
-              <li><a href="index.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li> 
-			<li><a href="sales.php?id=cash&invoice=<?php echo $finalcode ?>"><i class="icon-shopping-cart icon-2x"></i> Sales</a>  </li>             
+              <li><a href="customer.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li> 
+			  <li><a href="customer.php"><i class="icon-group icon-2x"></i> Customers</a>                                    </li>           
 			<li><a href="products.php"><i class="icon-list-alt icon-2x"></i> Products</a>                                     </li>
-			<li><a href="customer.php"><i class="icon-group icon-2x"></i> Customers</a>                                    </li>
+			
 			<li><a href="supplier.php"><i class="icon-group icon-2x"></i> Manufacturer</a>                                    </li>
-			<li><a href="salesreport.php?d1=0&d2=0"><i class="icon-bar-chart icon-2x"></i> Sales Report</a>                </li>
 			<li class="active"><a href="sales_inventory.php"><i class="icon-table icon-2x"></i> Product Inventory</a>                </li>
 			<br><br><br><br><br><br>		
 			<li>
@@ -146,7 +145,7 @@ window.onload=startclock;
 			</div>
 <br>
 
-<a  href="index.php"><button class="btn btn-default btn-large" style="float: left;"><i class="icon icon-circle-arrow-left icon-large"></i> Back</button></a>
+<a  href="customer.php"><button class="btn btn-default btn-large" style="float: left;"><i class="icon icon-circle-arrow-left icon-large"></i> Back</button></a>
 <div class="pull-right" style="margin-right:100px;">
 		<a href="javascript:Clickheretoprint()" style="font-size:20px;"><button class="btn btn-success btn-large"><i class="icon-print"></i> Print</button></a>
 		</div>
@@ -173,7 +172,7 @@ window.onload=startclock;
 			<th width="8%"> Total Amount </th>
 			<th width="8%"> Profit </th>
 
-			<th > Action </th>
+			
 		</tr>
 	</thead>
 	<tbody>
@@ -217,8 +216,8 @@ window.onload=startclock;
 			$pprice=$row['profit'];
 			echo formatMoney($pprice, true);
 			?></td>
-			<td> 				
-			<a href="deletesalesinventory.php?id=<?php echo $row['transaction_id']; ?>&qty=<?php echo $row['qty'];?>"><button class="btn btn-mini btn-danger"><i class="icon icon-trash"></i> Delete </button></a>
+							
+			
 			</tr>
 			<?php
 				}
@@ -236,8 +235,8 @@ window.onload=startclock;
 				<th></th>
 				<th>Total Amount</th>
 				<th>Total Profit</th>
-				<th></th>
-			<tr>
+				
+			
 				
 			<tr>
 				<th colspan="7"><strong style="font-size: 20px; color: #222222;">Total:</strong></th>
@@ -265,7 +264,7 @@ window.onload=startclock;
 				
 					</th>
 					
-					<th></th>
+					
 			</tr>
 		
 		

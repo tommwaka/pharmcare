@@ -122,14 +122,9 @@ window.onload=startclock;
 	<div class="span2">
              <div class="well sidebar-nav">
                  <ul class="nav nav-list">
-              <li><a href="index.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li> 
+              <li><a href="cash_sales.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li> 
 			<li class="active"><a href="sales.php?id=cash&invoice"><i class="icon-shopping-cart icon-2x"></i> Sales</a>  </li>             
-			<li><a href="products.php"><i class="icon-list-alt icon-2x"></i> Products</a>                                     </li>
-			<li><a href="customer.php"><i class="icon-group icon-2x"></i> Customers</a>                                    </li>
-			<li><a href="supplier.php"><i class="icon-group icon-2x"></i> Suppliers</a>                                    </li>
-			<li><a href="salesreport.php?d1=0&d2=0"><i class="icon-bar-chart icon-2x"></i> Sales Report</a>                </li>
-			<li><a href="sales_inventory.php"><i class="icon-table icon-2x"></i> Product Inventory</a>                </li>
-				<br><br><br><br><br><br>		
+			
 			<li>
 			 <div class="hero-unit-clock">
 		
@@ -144,15 +139,15 @@ window.onload=startclock;
         </div><!--/span-->
 		
 	<div class="span10">
-	<a href="sales.php?id=cash&invoice=<?php echo $finalcode ?>"><button class="btn btn-default"><i class="icon-arrow-left"></i> Back to Sales</button></a>
+	<a href="cash_sales.php?id=cash&invoice=<?php echo $finalcode ?>"><button class="btn btn-default"><i class="icon-arrow-left"></i> Back to Sales</button></a>
 
 <div class="content" id="content">
 <div style="margin: 0 auto; padding: 20px; width: 900px; font-weight: normal;">
 	<div style="width: 100%; height: 190px;" >
 	<div style="width: 900px; float: left;">
 	<center><div style="font:bold 25px 'Aleo';">Sales Receipt</div>
-	EREC`s Pharmacy	<br>
-	La Castellana, Negros Occidental	<br>	<br>
+	Pharmcare Pharmacy	<br>
+	We excel when you heal	<br>	<br>
 	</center>
 	<div>
 	<?php
@@ -186,7 +181,7 @@ window.onload=startclock;
 	<table border="1" cellpadding="4" cellspacing="0" style="font-family: arial; font-size: 12px;	text-align:left;" width="100%">
 		<thead>
 			<tr>
-				<th width="90"> Product Code </th>
+				<th width="90"> product N<sup>o</sup></th>
 				<th> Product Name </th>
 				<th> Qty </th>
 				<th> Price </th>
@@ -204,8 +199,8 @@ window.onload=startclock;
 					for($i=0; $row = $result->fetch(); $i++){
 				?>
 				<tr class="record">
-				<td><?php echo $row['product_code']; ?></td>
-				<td><?php echo $row['name']; ?></td>
+				<td><?php echo $row['product']; ?></td>
+				<td><?php echo $row['chem_name']; ?></td>
 				<td><?php echo $row['qty']; ?></td>
 				<td>
 				<?php

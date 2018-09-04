@@ -9,7 +9,7 @@
 	$sql = "UPDATE products 
 			SET qty=qty+?
 			WHERE product_id=?";
-	$q = $db->prepare($sql);
+	$q = $dbh->prepare($sql);
 	$q->execute(array($qty,$wapak));
 
 	$result = $dbh->prepare("DELETE FROM sales_order WHERE transaction_id= :memid");
