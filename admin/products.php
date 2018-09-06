@@ -206,8 +206,8 @@ window.onload=startclock;
 			<th width="10%"> Expiry Date </th>
 			<th width="6%"> Original Price </th>
 			<th width="6%"> Selling Price </th>
-			<th width="6%"> QTY </th>
-			<th width="5%"> Qty Left </th>
+			<th width="6%"> QTY/Packets Sold </th>
+			<th width="5%"> Qty/Packets Left </th>
 			<th width="8%"> Total </th>
 			<th width="8%"> Action </th>
 		</tr>

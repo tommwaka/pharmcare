@@ -46,13 +46,13 @@ for($i=0; $row = $result->fetch(); $i++){
 $cname=$row['name'];
 $invoice=$row['invoice_number'];
 $date=$row['date'];
-$cash=$row['due_date'];
+$cash=$row['amnt'];
 $cashier=$row['cashier'];
 
 $pt=$row['type'];
 $am=$row['amount'];
 if($pt=='cash'){
-$cash=$row['due_date'];
+$cash=$row['amnt'];
 $amount=$cash-$am;
 }
 }
@@ -126,7 +126,7 @@ window.onload=startclock;
 			<li class="active"><a href="sales.php?id=cash&invoice"><i class="icon-shopping-cart icon-2x"></i> Sales</a>  </li>             
 			<li><a href="products.php"><i class="icon-list-alt icon-2x"></i> Products</a>                                     </li>
 			<li><a href="customer.php"><i class="icon-group icon-2x"></i> Customers</a>                                    </li>
-			<li><a href="supplier.php"><i class="icon-group icon-2x"></i> Suppliers</a>                                    </li>
+			<li><a href="supplier.php"><i class="icon-group icon-2x"></i> Manufacturers</a>                                    </li>
 			<li><a href="salesreport.php?d1=0&d2=0"><i class="icon-bar-chart icon-2x"></i> Sales Report</a>                </li>
 			<li><a href="sales_inventory.php"><i class="icon-table icon-2x"></i> Product Inventory</a>                </li>
 				<br><br><br><br><br><br>		
@@ -151,7 +151,7 @@ window.onload=startclock;
 	<div style="width: 100%; height: 190px;" >
 	<div style="width: 900px; float: left;">
 	<center><div style="font:bold 25px 'Aleo';">Sales Receipt</div>
-	EREC`s Pharmacy	<br>
+	Pharmcare Pharmacy	<br>
 	La Castellana, Negros Occidental	<br>	<br>
 	</center>
 	<div>

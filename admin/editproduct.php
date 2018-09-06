@@ -35,8 +35,8 @@
 	?>
 </select><br>
 <span>Weight : </span><input type="text" style="width:265px; height:30px;"  name="grams" value="<?php echo $row['grams']; ?>" Required/><br>
-<span>QTY Left: </span><input type="number" style="width:265px; height:30px;" min="0" name="qty" value="<?php echo $row['qty']; ?>" /><br>
-<span>Quantity: </span><input type="number" style="width:265px; height:30px;" min="0" name="sold" value="<?php echo $row['qty_sold']; ?>" /><br>
+<span>QTY Left: </span><input type="text" style="width:265px; height:30px;" min="0" name="qty" value="<?php echo $row['qty']; ?>" /><br>
+<span>Quantity: </span><input type="text" style="width:265px; height:30px;" min="0" name="sold" value="<?php echo $row['qty_sold']; ?>" /><br>
 
 <div style="float:right; margin-right:10px;">
 

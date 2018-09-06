@@ -135,8 +135,9 @@ $finalcode='RS-'.createRandomPassword();
 
 <div style="margin-top: -19px; margin-bottom: 21px;">
 <a  href="admin.php"><button class="btn btn-default btn-large" style="float: none;"><i class="icon icon-circle-arrow-left icon-large"></i> Back</button></a>
-<button  style="float:right;" class="btn btn-success btn-mini"><a href="javascript:Clickheretoprint()"> Print</button></a>
-
+<div class="pull-right" style="margin-right:100px;">
+		<a href="javascript:Clickheretoprint()" style="font-size:20px;"><button class="btn btn-success btn-large"><i class="icon-print"></i> Print</button></a>
+		</div>
 </div>
 <form action="salesreport.php" method="get">
 <center><strong>From : <input type="text" style="width: 223px; padding:14px;" name="d1" class="tcal" value="" /> To: <input type="text" style="width: 223px; padding:14px;" name="d2" class="tcal" value="" />

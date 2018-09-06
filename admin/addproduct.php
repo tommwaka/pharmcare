@@ -27,7 +27,7 @@
 	?>
 </select><br>
 <span>Weight : </span><input type="text" style="width:265px; height:30px;" name="grams" ><br>
-<span>Quantity : </span><input type="number" style="width:265px; height:30px;" min="0" id="txt11" onkeyup="sum();" name="qty" Required ><br>
+<span>Quantity/Pkts : </span><select type="text" style="width:265px; height:30px;" min="0" id="txt11" onkeyup="sum();" name="qty" Required ><br>
 <span></span><input type="hidden" style="width:265px; height:30px;" id="txt22" name="qty_sold" Required ><br>
 <div style="float:right; margin-right:10px;">
 <button class="btn btn-success btn-block btn-large" style="width:267px;"><i class="icon icon-save icon-large"></i> Save</button>
