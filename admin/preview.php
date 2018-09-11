@@ -152,7 +152,7 @@ window.onload=startclock;
 	<div style="width: 900px; float: left;">
 	<center><div style="font:bold 25px 'Aleo';">Sales Receipt</div>
 	Pharmcare Pharmacy	<br>
-	La Castellana, Negros Occidental	<br>	<br>
+	We excel when you heal	<br>	<br>
 	</center>
 	<div>
 	<?php
