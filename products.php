@@ -21,7 +21,7 @@ Pharmcare
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
-<link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../style.css" media="screen" rel="stylesheet" type="text/css" />
 <!--sa poip up-->
 <script src="jeffartagame.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/application.js" type="text/javascript" charset="utf-8"></script>
@@ -134,12 +134,10 @@ window.onload=startclock;
           <div class="well sidebar-nav">
               <ul class="nav nav-list">
               <li><a href="customer.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li> 
-			  <li><a href="customer.php"><i class="icon-group icon-2x"></i> Customers</a>                                    </li>           
 			<li class="active"><a href="products.php"><i class="icon-list-alt icon-2x"></i> Products</a>                                     </li>
-			
+			<li><a href="customer.php"><i class="icon-group icon-2x"></i> Customers</a>                                    </li>
 			<li><a href="supplier.php"><i class="icon-group icon-2x"></i> Manufacturer</a> 
 			<li><a href="sales_inventory.php"><i class="icon-table icon-2x"></i> Product Inventory</a>                                     </li>
-			
 
 
 			<br><br><br><br><br><br>		
@@ -196,6 +194,7 @@ window.onload=startclock;
 <table class="hoverTable" id="resultTable" data-responsive="table" style="text-align: left;">
 	<thead>
 		<tr>
+		    <th width="13%"> Batch No </th>
 			<th width="12%"> Brand Name </th>
 			<th width="14%"> Chemical Name </th>
 			<th width="13%"> Category / Description </th>
@@ -205,8 +204,8 @@ window.onload=startclock;
 			<th width="10%"> Expiry Date </th>
 			<th width="6%"> Original Price </th>
 			<th width="6%"> Selling Price </th>
-			<th width="6%"> QTY </th>
-			<th width="5%"> Qty Left </th>
+			<th width="6%"> QTY/Packets Sold </th>
+			<th width="5%"> Qty/Packets Left </th>
 			<th width="8%"> Total </th>
 			<th width="8%"> Action </th>
 		</tr>
@@ -242,7 +241,7 @@ window.onload=startclock;
 				}
 			?>
 		
-
+		   <td>PC-00<?php echo $row['product_id']; ?></td>
 			<td><?php echo $row['product_code']; ?></td>
 			<td><?php echo $row['chem_name']; ?></td>
 			<td><?php echo $row['product_name']; ?></td>

@@ -1,4 +1,4 @@
- <div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -14,7 +14,7 @@
 						   echo htmlentities($_SESSION['alogin']);
 							}
 							else{
-							 
+							  header("location: index.php");
 							}
 								?></strong></a></li>
 			 <li><a> <i class="icon-calendar icon-large"></i>

@@ -114,7 +114,7 @@ $finalcode='RS-'.createRandomPassword();
               <ul class="nav nav-list">
               <li><a href="cash_sales.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li> 
 			  <li class="active"><a href="sales.php?id=cash&invoice=<?php echo $finalcode ?>"><i class="icon-shopping-cart icon-2x"></i> Sales</a>  </li>             
-			
+			  <br><br><br><br><br><br>
 			 <div class="hero-unit-clock">
 		
 			<form name="clock">

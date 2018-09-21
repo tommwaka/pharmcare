@@ -5,7 +5,7 @@
 <title>
 Pharmcare
 </title>
-    <link rel="shortcut icon" href="images/pos.jpg">
+    
 
   <link href="css/bootstrap.css" rel="stylesheet">
 

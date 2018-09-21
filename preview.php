@@ -46,13 +46,13 @@ for($i=0; $row = $result->fetch(); $i++){
 $cname=$row['name'];
 $invoice=$row['invoice_number'];
 $date=$row['date'];
-$cash=$row['due_date'];
+$cash=$row['amnt'];
 $cashier=$row['cashier'];
 
 $pt=$row['type'];
 $am=$row['amount'];
 if($pt=='cash'){
-$cash=$row['due_date'];
+$cash=$row['amnt'];
 $amount=$cash-$am;
 }
 }
@@ -122,9 +122,9 @@ window.onload=startclock;
 	<div class="span2">
              <div class="well sidebar-nav">
                  <ul class="nav nav-list">
-              <li><a href="cash_sales.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li> 
+              <li><a href="sales.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li> 
 			<li class="active"><a href="sales.php?id=cash&invoice"><i class="icon-shopping-cart icon-2x"></i> Sales</a>  </li>             
-			
+				<br><br><br><br><br><br>		
 			<li>
 			 <div class="hero-unit-clock">
 		
@@ -139,7 +139,7 @@ window.onload=startclock;
         </div><!--/span-->
 		
 	<div class="span10">
-	<a href="cash_sales.php?id=cash&invoice=<?php echo $finalcode ?>"><button class="btn btn-default"><i class="icon-arrow-left"></i> Back to Sales</button></a>
+	<a href="sales.php?id=cash&invoice=<?php echo $finalcode ?>"><button class="btn btn-default"><i class="icon-arrow-left"></i> Back to Sales</button></a>
 
 <div class="content" id="content">
 <div style="margin: 0 auto; padding: 20px; width: 900px; font-weight: normal;">
@@ -181,7 +181,7 @@ window.onload=startclock;
 	<table border="1" cellpadding="4" cellspacing="0" style="font-family: arial; font-size: 12px;	text-align:left;" width="100%">
 		<thead>
 			<tr>
-				<th width="90"> product N<sup>o</sup></th>
+				<th width="90"> Product Code </th>
 				<th> Product Name </th>
 				<th> Qty </th>
 				<th> Price </th>
@@ -199,7 +199,7 @@ window.onload=startclock;
 					for($i=0; $row = $result->fetch(); $i++){
 				?>
 				<tr class="record">
-				<td><?php echo $row['product']; ?></td>
+				<td><?php echo $row['product_code']; ?></td>
 				<td><?php echo $row['chem_name']; ?></td>
 				<td><?php echo $row['qty']; ?></td>
 				<td>

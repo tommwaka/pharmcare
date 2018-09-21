@@ -197,6 +197,7 @@ window.onload=startclock;
 <table class="hoverTable" id="resultTable" data-responsive="table" style="text-align: left;">
 	<thead>
 		<tr>
+		    <th width="13%"> Batch No </th>
 			<th width="12%"> Brand Name </th>
 			<th width="14%"> Chemical Name </th>
 			<th width="13%"> Category / Description </th>
@@ -243,7 +244,7 @@ window.onload=startclock;
 				}
 			?>
 		
-
+		   <td>PC-00<?php echo $row['product_id']; ?></td>
 			<td><?php echo $row['product_code']; ?></td>
 			<td><?php echo $row['chem_name']; ?></td>
 			<td><?php echo $row['product_name']; ?></td>
